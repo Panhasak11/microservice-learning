@@ -20,3 +20,9 @@
  - add @EnableConfigServer in application class
  - add folder to store properties configuration file
  - set up the application.propertie for (default,dev or product) or for other service (account, card, loan)
+
+## Day 8 config server git and connect from service to properties file on git 
+ - add spring-cloud.version, sprig cloud dependancy, dependacy mangement
+ - add class AccountServiceConfig
+ - add class Properties
+ - add ConfigController
