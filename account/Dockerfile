@@ -1,4 +1,4 @@
-FROM openjdk:21 AS build
+FROM eclipse-temurin:21
 
 LABEL maintainer="panhasakbank"
 
