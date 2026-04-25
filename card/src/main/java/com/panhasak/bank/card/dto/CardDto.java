@@ -14,5 +14,4 @@ public class CardDto {
 	private BigDecimal totalLimit;
 	private BigDecimal amountUse;
 	private BigDecimal availableAmount;
-	private LocalDate createDate;
 }

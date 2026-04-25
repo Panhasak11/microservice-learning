@@ -9,5 +9,6 @@ public interface AccountService {
 	Account save(Account account);
 	List<Account> getAllAccount();
 	Account findById(Long id);
+//	List<Account> getByCustomerId(Long id);
 	
 }
