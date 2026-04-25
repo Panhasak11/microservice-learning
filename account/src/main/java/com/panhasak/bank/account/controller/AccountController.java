@@ -16,6 +16,7 @@ import com.panhasak.bank.account.entity.Account;
 import com.panhasak.bank.account.mapper.AccountMapper;
 import com.panhasak.bank.account.service.AccountService;
 
+import io.micrometer.core.ipc.http.HttpSender.Response;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -47,4 +48,14 @@ public class AccountController {
 			.collect(Collectors.toList());
 		return ResponseEntity.ok(accountDtos);
 	}
+	
+//	@GetMapping("/get-by-customerId/{id}")
+//	public ResponseEntity<?> getByCustomerId(@PathVariable Long id){
+//		List<Account> byCustomerId = accountService.getByCustomerId(id);
+//		List<AccountDto> list = byCustomerId.stream()
+//			.map(accountMapper::toAccountDto)
+//			.collect(Collectors.toList());
+//		
+//		return ResponseEntity.ok(list);
+//	}
 }

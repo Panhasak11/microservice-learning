@@ -41,5 +41,11 @@ public class AccountServiceImpl implements AccountService{
 			.orElseThrow(() -> new RuntimeException("Account not found"));
 	}
 
+//	@Override
+//	public List<Account> getByCustomerId(Long id) {
+//		return accountRepository.findByCustomerId(id);
+//		
+//	}
+
 	
 }

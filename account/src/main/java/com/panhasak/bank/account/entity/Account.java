@@ -22,7 +22,7 @@ public class Account {
 	
 	@ManyToOne
 	@JoinColumn(name = "customerId")
-	private Customer customer;
+	private Customer customerId;
 	private String accountType;
 	private String branchAdd;
 	private LocalDate createDate;

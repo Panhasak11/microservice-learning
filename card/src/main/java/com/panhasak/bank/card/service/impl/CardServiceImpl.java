@@ -1,5 +1,7 @@
 package com.panhasak.bank.card.service.impl;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ public class CardServiceImpl implements CardService{
 	
 	@Override
 	public Card save(Card card) {
+		card.setCreateDate(LocalDate.now());
 		return cardRespository.save(card);
 	}
 
