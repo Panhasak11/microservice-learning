@@ -3,17 +3,23 @@ package com.panhasak.bank.loan.entity;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@Document(collection = "loan")
+@Entity
+@Table(name = "loan")
 public class Loan {
 
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private Long loanNumber;
 	private Long customerId;
 	private LocalDate startDate;
