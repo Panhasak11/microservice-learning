@@ -48,4 +48,12 @@ public class CardController {
 		
 		return ResponseEntity.ok(cardMapper.toCardDto(card));
 	}
+	
+	@PostMapping("/byCutomerId/{customerId}")
+	public ResponseEntity<List<CardDto>> getByCustomerId(@PathVariable Long customerId){
+		List<CardDto> cardList = cardService.getByCustomerId(customerId).stream()
+			.map(cardMapper::toCardDto)
+			.toList();
+		return ResponseEntity.ok(cardList);
+	}
 }

@@ -52,5 +52,14 @@ public class LoanController {
 				.body(loanMapper.toLoanDto(loan));
 	}
 	
+	@PostMapping("/by-cusId/{customerId}")
+	public ResponseEntity<List<LoanDto>> getByCustomerId(@PathVariable Long customerId){
+		List<LoanDto> list = loanService.getByCustomerId(customerId)
+			.stream().map(loanMapper::toLoanDto)
+			.toList();
+		return ResponseEntity.ok(list);
+		
+	}
+	
 
 }
