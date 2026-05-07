@@ -9,4 +9,5 @@ public interface CardService {
 	Card save(Card card);
 	List<Card> getAll();
 	Card getById(Long id);
+	List<Card> getByCustomerId(Long id);
 }

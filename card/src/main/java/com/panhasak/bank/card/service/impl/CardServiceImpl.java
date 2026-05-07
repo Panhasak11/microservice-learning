@@ -35,4 +35,10 @@ public class CardServiceImpl implements CardService{
 				.orElseThrow(() -> new RuntimeException("Card not found"));
 	}
 
+	@Override
+	public List<Card> getByCustomerId(Long id) {
+		 return cardRespository.findByCustomerId(id);
+		 
+	}
+	
 }

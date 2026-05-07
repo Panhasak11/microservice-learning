@@ -33,4 +33,9 @@ public class LoanServiceImpl implements LoanService{
 				.orElseThrow(() -> new RuntimeException("Loan not found"));
 	}
 
+	@Override
+	public List<Loan> getByCustomerId(Long customerId) {
+		return loanRepository.findByCustomerId(customerId);
+	}
+
 }
